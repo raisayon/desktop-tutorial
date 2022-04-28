@@ -65,8 +65,8 @@ def wang_screenshot_filfox(address):
             driver.find_element_by_tag_name('body').send_keys(Keys.COMMAND + 'r')
             time.sleep(3)
             #click address link
-            owner_address = driver.find_element_by_xpath('/html/body/div[1]/div/div/div[1]/div[1]/div/div[6]/div/div[2]/div[2]/a')
-            owner_address.click()
+            #owner_address = driver.find_element_by_xpath('/html/body/div[1]/div/div/div[1]/div[1]/div/div[6]/div/div[2]/div[2]/a')
+            #owner_address.click()
 
 
 wang_screenshot_filfox(address_dic)
