@@ -18,6 +18,6 @@ https://youtu.be/ftLR0eZI2kA
 3)  create virtual environment 
 3.1)virtualenv lol 
 3.2)source lol/bin/activate
-3.3) pip install -r requirements.txt
+3.3) pip install -r requirements.txt  #created by using pip freeze > requirement.txt
 
 4)

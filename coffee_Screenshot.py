@@ -41,31 +41,30 @@ address_dic = {
 
 def wang_screenshot_filfox(address):
     #address_input = input("Enter your address")
-    #tala ko line ma chai pass garnu parne 
     print(address.keys())
     for name in address.keys():
         #os.mkdir(f'/Users/sayonrai/CC/dailydata/{name}')
-        for addr in addr[name]:
+        for address in address[name]:
             url = "https://filfox.info/en/"
             driver = webdriver.Chrome()  # Optional argument, if not specified will search path.
             driver.get(url) # website link
             driver.implicitly_wait(3)
             driver.execute_script("document.body.style.zoom='50%'") #website zoom 
-            print(f'{name} {addr}')
+            print(f'{name} {address}')
             time.sleep(5)
             search_box = driver.find_element_by_xpath('//*[@id="__layout"]/div/nav/div[2]/div[5]/input')
-            search_box.send_keys(addr)
-            #for loop chalako pass vaye ni number matra hunxa 'f01111881' pass hudaina
+            search_box.send_keys(address)
             search_box.send_keys(Keys.RETURN)
             time.sleep(5) # Let the user actually see something!
             #takes screenshot
-            image = ss.full_Screenshot(driver, save_path= f'/Users/sayonrai/CC/dailydata/{name}', image_name=f'{addr}.png')
+            image = ss.full_Screenshot(driver, save_path= f'/Users/sayonrai/CC/dailydata/{name}', image_name=f'{address}.png')
             #screen = Image.open(image)
             #screen.show()
             
             #refresh
             driver.find_element_by_tag_name('body').send_keys(Keys.COMMAND + 'r')
             time.sleep(3)
+            #click address link
             owner_address = driver.find_element_by_xpath('/html/body/div[1]/div/div/div[1]/div[1]/div/div[6]/div/div[2]/div[2]/a')
             owner_address.click()
 
