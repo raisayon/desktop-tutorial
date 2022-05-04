@@ -28,8 +28,8 @@ address_dic = {
     #"wang4":"f01501599","wang5":"f01589943",
     #"shen":"f01054527","shen1":"f01177326",
     #"mark":["f01265322"],
-    #"chen":['f01464400','f01372569','f01597362','f01445415','f01698865','f01771575'],
-    #"ben":['f01264903'],
+    "chen":['f01464400','f01372569','f01597362','f01445415','f01698865','f01771575'],
+    "ben":['f01264903'],
     "deng":["f01316365"],
     "coffeecloud":["f01807413"],
     "su":["f01624906","f01782079"],
@@ -39,7 +39,7 @@ address_dic = {
    
     }
 
-def wang_screenshot_filfox(address):
+def screenshot_filfox(address):
     #address_input = input("Enter your address")
     print(address.keys())
     for name in address.keys():
@@ -69,6 +69,6 @@ def wang_screenshot_filfox(address):
             #owner_address.click()
 
 
-wang_screenshot_filfox(address_dic)
+screenshot_filfox(address_dic)
 
 
