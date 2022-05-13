@@ -6,7 +6,7 @@ from selenium.webdriver.support.ui import Select
 
 from bs4 import BeautifulSoup
 from PIL import Image
-from Screenshot import Screenshot_Clipping
+from screenshot import Screenshot_Clipping
 ss = Screenshot_Clipping.Screenshot()
 
 import time
