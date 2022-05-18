@@ -20,16 +20,20 @@ import json
 
 #dictionary of the name and address it belongs to 
 x = {
-   "wang": ["f01111881","f01464670","f01154375","f01034007","f01501599","f01589943"],
-   "shen": ["f01054527","f01177326"],
-   "mark":["f01265322","f01137193"],
-   "chen":["f01464400","f01372569","f01597362","f01445415","f01698865","f01771575"],
-   "ben":["f01264903"],
-   "deng":["f01316365"],
-   "coffeecloud":["f01807413","f01822659","f01845913"],
-   "mei":["f01624906","f01782079","f01831595"],
-   "ivan":["f01727648","f01768764"],
-   "shenzhen":[""]
+    "wang": ["f01111881","f01464670","f01154375","f01034007","f01501599","f01589943"],
+ "shen": ["f01054527","f01177326"],
+ "mark":["f01265322","f01137193"],
+ "chen":["f01464400","f01372569","f01597362","f01445415","f01698865","f01771575"],
+ "ben":["f01264903"],
+ "deng":["f01316365"],
+ "coffeecloud":["f01807413","f01822659"],
+ "mei":["f01624906","f01782079","f01831595"],
+ "ivan":["f01727648","f01768764"],
+ "shenzhen":["f0492009","f079301","f070501","f02415","f018781","f018785",
+    "f018780","f02633","f018783","f079247","f0160135","f02645","f018782",
+    "f073628","f08025","f03491","f018784","f07990"]
+   
+
 
 }
 
@@ -55,7 +59,7 @@ def screenshot_filfox(address):
             search_box.send_keys(addr)
             #for loop chalako pass vaye ni number matra hunxa 'f01111881' pass hudaina
             search_box.send_keys(Keys.RETURN)
-            time.sleep(5) # Let the user actually see something!
+            time.sleep(10) # Let the user actually see something!
             #takes screenshot
             image = ss.full_Screenshot(driver, save_path= f'/Users/sayonrai/CC/dailydata/{name}', image_name=f'{addr}.png')
             #screen = Image.open(image)
@@ -63,7 +67,7 @@ def screenshot_filfox(address):
             
             #refresh
             driver.find_element_by_tag_name('body').send_keys(Keys.COMMAND + 'r')
-            time.sleep(3)
+            time.sleep(6)
             """
             owner_address = driver.find_element_by_xpath('/html/body/div[1]/div/div/div[1]/div[1]/div/div[6]/div/div[2]/div[2]/a')
             owner_address.click()
